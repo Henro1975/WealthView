@@ -18,8 +18,8 @@ How can I help u today?`,
 // Colors Configuration - UPDATE THESE VALUES BASED ON USER DESIGN PREFERENCES
 export const COLORS = {
   // UPDATE: Set to the background color (hex format)
-  BACKGROUND: "#FFFFFF`,
+  BACKGROUND: "#FFFFFF",
 
   // UPDATE: Set to the primary color for buttons, links, etc. (hex format)
-  PRIMARY: "#703D92`,
+  PRIMARY: "#703D92",
 } as const;
