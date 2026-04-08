@@ -9,7 +9,7 @@ I'm your 24/7 financial guide, here to help you build wealth & achieve financial
 How can I help u today?`,
 
   // UPDATE: Set to the name of the chatbot app
-  NAME: "WealthView `,
+  NAME: "WealthView",
 
   // UPDATE: Set to the description of the chatbot app
   DESCRIPTION: "Discover elite financial education & expert investment guidance—your key to building wealth and achieving true financial freedom. 24/7 personalized support for all your goals. Join now!",
