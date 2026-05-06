@@ -4,6 +4,45 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Send, User, Bot } from "lucide-react"
 import { useChatbot } from "@/hooks/use-chatbot"
+"use client"
+// ... imports are up here
+
+export default function Home() {
+  // 1. Existing hooks (like useChatbot, useState) are here
+  const { messages, input, handleInputChange, handleSubmit } = useChatbot();
+
+  // 2. ADD THE FUNCTION HERE
+  const handlePiPayment = async () => {
+    if (typeof window !== "undefined" && window.Pi) {
+      try {
+        const payment = await window.Pi.createPayment({
+          amount: 0.1,
+          memo: "WealthView Step 10 Verification",
+          metadata: { orderId: "step-10-test" },
+        }, {
+          onReadyForServerApproval: (paymentId: string) => {
+            console.log("Payment created, ID:", paymentId);
+          },
+          onReadyForServerCompletion: (paymentId: string, txid: string) => {
+            alert("Transaction Successful! Step 10 is complete.");
+          },
+          onCancel: (paymentId: string) => console.log("Cancelled"),
+          onError: (error: Error) => console.error(error),
+        });
+      } catch (err) {
+        console.error("Payment failed", err);
+      }
+    }
+  };
+
+  // 3. The return starts after the function
+  return (
+    <main>
+      {/* Your UI code */}
+    </main>
+  );
+                                     }
+          
 import { useScrollToBottom } from "@/hooks/use-scroll-to-bottom"
 import { APP_CONFIG, COLORS } from "@/lib/app-config"
 import { OliveLogo } from "@/components/olive-logo"
