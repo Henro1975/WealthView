@@ -204,3 +204,15 @@ export default function ChatBot() {
     </div>
   )
 }
+{/* Step 10 Verification Button */}
+<div className="p-4 border-t border-gray-200 dark:border-gray-800">
+  <Button 
+    onClick={handlePiPayment} 
+    className="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 rounded-xl shadow-lg transition-all"
+  >
+    Verify Step 10: Pay 0.1 Test Pi
+  </Button>
+  <p className="text-center text-xs text-gray-500 mt-2">
+    This is a required Testnet transaction to finalize your app setup.
+  </p>
+</div>
