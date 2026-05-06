@@ -255,3 +255,6 @@ export default function ChatBot() {
     This is a required Testnet transaction to finalize your app setup.
   </p>
 </div>
+<Button onClick={handlePiPayment}>
+  Verify Step 10
+</Button>
