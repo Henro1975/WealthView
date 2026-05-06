@@ -16,9 +16,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  import Script from "next/script"; // Add this import at the very top of the file
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        {/* This loads the Pi SDK so your app can talk to the Pi Network */}
+        <Script 
+          src="https://sdk.minepi.com/pi-sdk.js" 
+          strategy="beforeInteractive" 
+        />
+      </head>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   );
 }
+  
