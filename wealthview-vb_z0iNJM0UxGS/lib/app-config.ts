@@ -4,9 +4,9 @@
 export const APP_CONFIG = {
   // UPDATE: Set to the welcome message for the chatbot
   WELCOME_MESSAGE:
-    "Welcome!
+    `Welcome!
 I'm your 24/7 financial guide, here to help you build wealth & achieve financial freedom. Let's explore financial education & investment insights to reach your goals.
-How can I help u today?",
+How can I help u today?`,
 
   // UPDATE: Set to the name of the chatbot app
   NAME: "WealthView ",
