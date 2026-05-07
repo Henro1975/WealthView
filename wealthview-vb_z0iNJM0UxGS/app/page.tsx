@@ -34,7 +34,34 @@ export default function Home() {
       }
     }
   };
+"use client";
+import { useEffect } from "react";
+// ... other imports
 
+export default function Home() {
+  // 1. ALL LOGIC/HOOKS GO HERE
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.Pi) {
+      window.Pi.init({ version: "2.0", sandbox: true });
+    }
+  }, []);
+
+  const handlePiPayment = async () => {
+    // ... your payment code
+  };
+
+  // 2. THE UI STARTS HERE
+  return (
+    <main>
+      {/* ... your existing chatbot UI */}
+      
+      {/* PLACE THE BUTTON ONLY INSIDE THE RETURN BLOCK */}
+      <button onClick={handlePiPayment} className="bg-purple-600 p-2 text-white">
+        Verify Step 10
+      </button>
+    </main>
+  );
+}
   // 3. The return starts after the function
   return (
     <main>
