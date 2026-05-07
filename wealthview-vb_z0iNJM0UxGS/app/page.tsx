@@ -258,3 +258,14 @@ export default function ChatBot() {
 <Button onClick={handlePiPayment}>
   Verify Step 10
 </Button>
+useEffect(() => {
+  // Ensure we are in a browser environment
+  if (typeof window !== "undefined" && window.Pi) {
+    try {
+      window.Pi.init({ version: "2.0", sandbox: true });
+      console.log("Pi SDK Initialized");
+    } catch (err) {
+      console.error("Initialization failed", err);
+    }
+  }
+}, []);
