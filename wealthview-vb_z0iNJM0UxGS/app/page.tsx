@@ -296,3 +296,6 @@ useEffect(() => {
     }
   }
 }, []);
+<Button onClick={handlePiPayment}>
+  Verify Step 10
+</Button>
