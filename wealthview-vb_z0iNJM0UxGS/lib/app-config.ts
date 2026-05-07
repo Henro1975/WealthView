@@ -1,8 +1,16 @@
 // *** Configurable variables for the app ***
 // This file contains all the user-editable configuration values that can be updated when customizing the chatbot app.
 
-export const APP_CONFIG = {
-  // UPDATE: Set to the welcome message for the chatbot
+export const APP_CONFIG = { ... };
+
+export const BACKEND_URLS = {
+  API_BASE: "your-url-here"
+};
+
+export const PI_NETWORK_CONFIG = {
+  sandbox: true, // or false
+  // other config
+};
   WELCOME_MESSAGE:
     `Welcome!
 I'm your 24/7 financial guide, here to help you build wealth & achieve financial freedom. Let's explore financial education & investment insights to reach your goals.
